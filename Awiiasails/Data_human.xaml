@@ -1,0 +1,28 @@
+﻿<Window x:Class="Awiiasails.Data_human"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Awiiasails"
+        mc:Ignorable="d"
+        Title="Данные пассажира" Height="534" Width="464">
+    <Grid Background="LightCyan" Margin="0,0,0,3">
+        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="21,54,0,0" VerticalAlignment="Top"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="21,94,0,0" VerticalAlignment="Top"/>
+        <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="21,140,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="TB_famaliya" HorizontalAlignment="Center" Margin="0,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" PreviewTextInput="TextBox_PreviewTextInput"/>
+        <TextBox x:Name="TB_name" HorizontalAlignment="Center" Margin="0,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" PreviewTextInput="TextBox_PreviewTextInput"/>
+        <DatePicker x:Name="DateBorn" HorizontalAlignment="Center" Margin="0,142,0,0" VerticalAlignment="Top" Width="156" CalendarClosed="LB_calendarClosed"/>
+        <Label Content="Паспорт" HorizontalAlignment="Left" Margin="21,191,0,0" VerticalAlignment="Top"/>
+        <Label Content="Серия" HorizontalAlignment="Left" Margin="200,191,0,0" VerticalAlignment="Top"/>
+        <Label Content="Номер" HorizontalAlignment="Left" Margin="303,191,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TB_PASPORT_seria" HorizontalAlignment="Left" Margin="249,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47"/>
+        <TextBox x:Name="TB_PASPORT_number" HorizontalAlignment="Left" Margin="352,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" />
+        <Label Content="Данные пассажиров" HorizontalAlignment="Left" Margin="21,240,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_add_human" Content="Добавить пассажира" HorizontalAlignment="Left" Margin="272,231,0,0" VerticalAlignment="Top" Width="136" Click="btn_add_Click" Height="22" Background="PaleTurquoise"/>
+        <ListBox x:Name="LB_data_passagires" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,271,40,58" HorizontalAlignment="Right" Width="403"/>
+        <Button x:Name="btn_edit" Content="Редактировать" HorizontalAlignment="Left" Margin="21,474,0,0" VerticalAlignment="Top" Width="165" Background="PaleTurquoise" Foreground="Black" IsEnabled="False" Click="btn_edit_Click"/>
+        <Button x:Name="btn_next" Content="Далее" HorizontalAlignment="Left" Margin="260,474,0,0" VerticalAlignment="Top" Width="165" Background="PaleTurquoise" Foreground="Black" IsEnabled="False" Click="btn_next_Click"/>
+
+    </Grid>
+</Window>
